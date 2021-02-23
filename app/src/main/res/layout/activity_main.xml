@@ -1,0 +1,72 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<RelativeLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools = "http://schemas.android.com/tools"
+    android:layout_width = "match_parent"
+    android:layout_height = "match_parent"
+    android:layout_margin = "16dp"
+    tools:context = ".MainActivity">
+
+    <EditText
+        android:id="@+id/etIP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="IP-Address"
+        android:text="192.168.1.7"
+        android:inputType="phone" />
+    <EditText
+        android:id = "@+id/etPort"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:layout_below = "@+id/etIP"
+        android:hint = "Port No"
+        android:text="5005"
+        android:inputType = "phone" />
+    <Button
+        android:id = "@+id/btnConnect"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:layout_below = "@+id/gear"
+        android:layout_gravity = "center"
+        android:layout_marginTop = "16dp"
+        android:text = "Connect To Server" />
+    <EditText
+        android:id="@+id/gear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etPort"
+        android:layout_centerHorizontal="true"
+        android:ems="2"
+        android:text="5"
+        android:inputType="number" />
+
+    <io.github.controlwear.virtual.joystick.android.JoystickView
+        android:id="@+id/joystick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/status"
+        android:layout_marginBottom="40dp"
+        custom:JV_backgroundColor="#009688"
+
+        custom:JV_borderColor="#00796B"
+        custom:JV_borderWidth="8dp"
+        custom:JV_buttonColor="#FF6E40" />
+
+    <TextView
+        android:id="@+id/etMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom = "true"
+        android:inputType="text"
+        android:text="Values" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/etMessage"
+        android:text="Status" />
+
+
+
+</RelativeLayout>
